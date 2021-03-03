@@ -1,89 +1,90 @@
 #include<stdio.h>
 #include<string.h>
 #include<assert.h>
-//int main()
-//{
-//	char arr[] = "hello bit";
-//	size_t;//·µ»ØÖµÊÇsize_t unsigned int
-//	int len = strlen(arr);
-//	printf("len=%d\n", len);
-//	return 0;
-//}
+int main()
+{
+	char arr[] = "hello bit";
+	size_t;//è¿”å›å€¼æ˜¯size_t unsigned int
+	int len = strlen(arr);
+	printf("len=%d\n", len);
+	return 0;
+}
 
-//int main()
-//{
-//	const char* p1 = "abc";
-//	const char* p2 = "adbcdef";
-//	if (strlen(p1) - strlen(p2) > 0)
-//		//ÒòÎª·µ»ØÖµÊÇÎŞ·ûºÅÊı£¬ËùÒÔÃ»ÓĞ¸ºÊı
-//	{
-//		printf("hehe");
-//	}
-//	else
-//	{
-//		printf("haha");
-//	}
-//	return 0;
-//}
+int main()
+{
+	const char* p1 = "abc";
+	const char* p2 = "adbcdef";
+	if (strlen(p1) - strlen(p2) > 0)
+		//å› ä¸ºè¿”å›å€¼æ˜¯æ— ç¬¦å·æ•°ï¼Œæ‰€ä»¥æ²¡æœ‰è´Ÿæ•°
+	{
+		printf("hehe");
+	}
+	else
+	{
+		printf("haha");
+	}
+	return 0;
+}
 
-//Ä£ÄâÊµÏÖstrlen
-//size_t my_strlen(const char* str)
-//{
-//	int count = 0;//¼ÆÊıÆ÷
-//	assert(str != NULL);
-//	//¶ÏÑÔ²»ÊÇ¿ÕÖ¸Õë£¬Èç¹ûÃ»ÓĞÕâ²½£¬µ±ÊÇ¿ÕÖ¸ÕëµÄÊ±ºò¿ÉÄÜ»á±ÀÀ£
-//	while (*str != '\0')
-//	{
-//		count++;
-//		str++;
-//	}
-//	return count;
-//}
-//int main()
-//{
-//	char arr[] = "hello";
-//	int len = my_strlen(arr);
-//	printf("%d\n", len);
-//	return 0;
-//}
+æ¨¡æ‹Ÿå®ç°strlen
+size_t my_strlen(const char* str)
+{
+	int count = 0;//è®¡æ•°å™¨
+	assert(str != NULL);
+	//æ–­è¨€ä¸æ˜¯ç©ºæŒ‡é’ˆï¼Œå¦‚æœæ²¡æœ‰è¿™æ­¥ï¼Œå½“æ˜¯ç©ºæŒ‡é’ˆçš„æ—¶å€™å¯èƒ½ä¼šå´©æºƒ
+	while (*str != '\0')
+	{
+		count++;
+		str++;
+	}
+	return count;
+}
+int main()
+{
+	char arr[] = "hello";
+	int len = my_strlen(arr);
+	printf("%d\n", len);
+	return 0;
+}
 
-//Èç¹û²»ÄÜÓÃÁÙÊ±±äÁ¿
-//size_t my_strlen(const char* str)
-//{
-//	assert(str != NULL);
-//	if (*str != '\0')
-//	{
-//		return 1 + my_strlen(str + 1);
-//	}
-//	else
-//	{
-//		return 0;
-//	}
-//}
-//int main()
-//{
-//	char arr[] = "hello";
-//	int len = my_strlen(arr);
-//	printf("%d\n", len);
-//	return 0;
-//}
+//å¦‚æœä¸èƒ½ç”¨ä¸´æ—¶å˜é‡
+size_t my_strlen(const char* str)
+{
+	assert(str != NULL);
+	if (*str != '\0')
+	{
+		return 1 + my_strlen(str + 1);
+	}
+	else
+	{
+		return 0;
+	}
+}
 
-//Ö¸ÕëÏà¼õµÄ×ö·¨
-//size_t my_strlen(const char* str)
-//{
-//	assert(str != NULL);
-//	const char* start = str;
-//	//str ²»ÄÜ³õÊ¼»¯charÀàĞÍ£¬ËùÒÔÓÃconst
-//	while (*str != '\0')
-//	{
-//		str++;
-//	}
-//	return str - start;
-//}
-//int main()
-//{
-//	char arr[] = "hello";
-//	int len = my_strlen(arr);
-//	printf("%d\n", len);
-//	return 0;
-//}
+int main()
+{
+	char arr[] = "hello";
+	int len = my_strlen(arr);
+	printf("%d\n", len);
+	return 0;
+}
+
+//æŒ‡é’ˆç›¸å‡çš„åšæ³•
+size_t my_strlen(const char* str)
+{
+	assert(str != NULL);
+	const char* start = str;
+	//str ä¸èƒ½åˆå§‹åŒ–charç±»å‹ï¼Œæ‰€ä»¥ç”¨const
+	while (*str != '\0')
+	{
+		str++;
+	}
+	return str - start;
+}
+int main()
+{
+	char arr[] = "hello";
+	int len = my_strlen(arr);
+	printf("%d\n", len);
+	return 0;
+}
