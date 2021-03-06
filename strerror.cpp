@@ -14,3 +14,19 @@ int main()
 	printf("%s\n", strerror(errno));
 	return 0;
 }
+int main()
+{
+	FILE* pf = fopen("test.txt", "r");
+	if (pf == NULL)
+	{
+		//printf("%s\n", strerror(errno));
+		perror("打印错误信息");
+	}
+	else
+	{
+		printf("打开成功\n");
+		fclose(pf);
+		pf = NULL;
+	}
+	return 0;
+}
