@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 #include<assert.h>
-//能够实现重叠拷贝
+//鑳藉瀹炵幇閲嶅彔鎷疯礉
 
 int main()
 {
@@ -17,7 +17,7 @@ void* my_memmove(void* dest, const void* src, size_t count)
 	void* ret = dest;
 	if (dest < src)
 	{
-		while (count--)//从前向后拷贝
+		while (count--)//浠庡墠鍚戝悗鎷疯礉
 		{
 			*(char*)dest = *(char*)src;
 			dest = (char*)dest + 1;
@@ -26,7 +26,7 @@ void* my_memmove(void* dest, const void* src, size_t count)
 	}
 	else
 	{
-		while (count--)//从后向前拷贝
+		while (count--)//浠庡悗鍚戝墠鎷疯礉
 		{
 			*((char*)dest + count) = *((char*)src + count);
 		}
@@ -40,4 +40,4 @@ int main()
 	return 0;
 }
 
-//也可以创建个新数组，将原数组中的数放进去，但是会浪费空间，也会有不知道空间创建多大等困扰
+//涔熷彲浠ュ垱寤轰釜鏂版暟缁勶紝灏嗗師鏁扮粍涓殑鏁版斁杩涘幓锛屼絾鏄細娴垂绌洪棿锛屼篃浼氭湁涓嶇煡閬撶┖闂村垱寤哄澶х瓑鍥版壈
