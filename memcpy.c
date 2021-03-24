@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<string.h>
-//ÄÚ´æ¿½±´
+//å†…å­˜æ‹·è´
 int main()
 {
 	int arr1[] = { 1,2,3,4,5 };
@@ -14,8 +14,8 @@ void* my_memcpy(void* dest, const void* src, size_t count)
 	void* ret = dest;
 	while (count--)
 	{
-		//¿½±´Ò»¸ö×Ö½Ú
-		*(char*)dest = *(char*)src;//ÒªÏÈ×ª»»ÀàĞÍ
+		//æ‹·è´ä¸€ä¸ªå­—èŠ‚
+		*(char*)dest = *(char*)src;//è¦å…ˆè½¬æ¢ç±»å‹
 		dest = (char*)dest + 1;
 		src = (char*)src + 1;
 	}
@@ -29,5 +29,5 @@ int main()
 	return 0;
 }
 
-ÔÚ¿âÀïÃæµÄmemcpyÊÇ¿ÉÒÔÊµÏÖÖØµşµÄ¿½±´µÄ
-µ«ÊÇÔÚcÓïÑÔµÄÒªÇóÀïÃæmemcpyÖ»ÊÇÊµÏÖ²»ÖØµşµÄ¿½±´µÄ
+åœ¨åº“é‡Œé¢çš„memcpyæ˜¯å¯ä»¥å®ç°é‡å çš„æ‹·è´çš„
+ä½†æ˜¯åœ¨cè¯­è¨€çš„è¦æ±‚é‡Œé¢memcpyåªæ˜¯å®ç°ä¸é‡å çš„æ‹·è´çš„
