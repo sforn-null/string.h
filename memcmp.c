@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-//�ڴ�Ƚ�
+//ÄÚ´æ±È½Ï
 int main()
 {
 	int arr1[] = { 1,2,3,4,5 };
